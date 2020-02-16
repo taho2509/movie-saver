@@ -1,0 +1,25 @@
+{
+  "name": "movie-saver",
+  "version": "1.0.0",
+  "description": "A microservice to save movies to mongo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon -r dotenv/config --exec node index.js"
+  },
+  "keywords": [
+    "nats",
+    "mongo",
+    "microservice"
+  ],
+  "author": "Angel Ulice Tabares Gonzalez <taho2509@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^5.8.3",
+    "node-nats-streaming": "^0.2.6"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.2"
+  }
+}
