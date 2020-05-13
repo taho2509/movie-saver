@@ -16,7 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "mongoose": "^5.9.13",
-    "node-nats-streaming": "^0.2.6"
+    "node-nats-streaming": "^0.3.2"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
