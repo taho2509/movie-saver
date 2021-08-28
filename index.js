@@ -2,7 +2,7 @@ const stan = require("node-nats-streaming").connect(
   "test-cluster",
   "movie-saver",
   {
-    url: process.env.NATS_URL
+    url: process.env.NATS_URL,
   }
 );
 const movieRepository = require("./src/mongo-provider");
@@ -17,7 +17,7 @@ stan.on("connect", () => {
   opts.setAckWait(10 * 1000); //10s
   const subscription = stan.subscribe(process.env.INCOMING_CHANNEL, opts);
 
-  subscription.on("message", async msg => {
+  subscription.on("message", async (msg) => {
     console.log(`Received a message [${msg.getSequence()}] ${msg.getData()}`);
     const movieEvent = JSON.parse(msg.getData());
     const movie = movieEvent.data;
